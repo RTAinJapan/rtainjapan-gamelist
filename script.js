@@ -3,7 +3,7 @@ const HORARO_USER = "rtaij";
 /** 1ページに表示するゲーム数の上限 */
 let LIST_PAGENATION_NUM = 11;
 /** eventId未指定時のリダイレクト */
-const REDIRECT_QUERY = "?eventId=rtaijs2024";
+const REDIRECT_QUERY = "?eventId=rtaijs2025";
 
 const loadImage = (src) => {
   return new Promise((resolve, reject) => {
@@ -139,6 +139,12 @@ const getTracker = async (eventId) => {
 var gameList = [];
 
 const handleChangeDay = (day) => {
+  replaceSelectPage();
+  draw();
+}
+
+const handleChangeMax = (max) => {
+  LIST_PAGENATION_NUM = max;
   replaceSelectPage();
   draw();
 }
@@ -332,7 +338,6 @@ const init = async () => {
   insertSelectDays();
   replaceSelectPage();
 
-  draw();
   draw();
 }
 

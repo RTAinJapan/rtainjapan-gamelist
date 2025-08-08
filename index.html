@@ -19,6 +19,16 @@
     <select id="day" style="width:100px;margin:10px;padding:2px;" onchange="handleChangeDay(this.value);">
     </select>
 
+    <select id="max" style="width:150px;padding:2px;" onchange="handleChangeMax(this.value);">
+      <option value="5">5 games / page</option>
+      <option value="6">6 games / page</option>
+      <option value="7">7 games / page</option>
+      <option value="8">8 games / page</option>
+      <option value="9">9 games / page</option>
+      <option value="10">10 games / page</option>
+      <option value="11" selected>11 games / page</option>
+    </select>
+
     <select id="page" style="width:50px;margin:10px -5px 10px 0;padding:2px;" onchange="handleChangePage(this.value);">
       <option value="0">1</option>
     </select>
