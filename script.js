@@ -3,7 +3,7 @@ const HORARO_USER = "rtaij";
 /** 1ページに表示するゲーム数の上限 */
 let LIST_PAGENATION_NUM = 11;
 /** eventId未指定時のリダイレクト */
-const REDIRECT_QUERY = "?eventId=rtaijs2025";
+const REDIRECT_QUERY = "?eventId=rtaijw2025";
 
 const loadImage = (src) => {
   return new Promise((resolve, reject) => {
@@ -42,24 +42,23 @@ const getHoraro = async (user, eventId) => {
   // データ取得
   const url = `https://rtain.jp/api/ajax/index.php?url=https://horaro.org/-/api/v1/events/${user}/schedules/${eventId}`;
   const res = await (await fetch(url)).json();
-  // const res = await (await fetch("./test/horaro.json")).json();
+  // const res = await (await fetch("./test/test.json")).json();
+
+  // indexを定義
+  /** @type string[] */
+  const columns = res.data.columns;
+  const gameNameIndex = columns.findIndex(item => item === "ゲーム");
+  const categoryIndex = columns.findIndex(item => item === "カテゴリ");
+  const runnersIndex = columns.findIndex(item => item === "走者");
 
   // 必要なデータを抽出
   const tmplist = res.data.items.map(item => {
-
-    let gameName;
-    let category;
-    let gameConsole;
-    let runType;
-    let est;
-    let runners;
-    if (item.data.length === 6) {
-      // w2023以前
-      [gameName, category, gameConsole, runType, est, runners] = item.data;
-    } else {
-      // s2024
-      [gameName, category, runType, gameConsole, runners] = item.data;
-    }
+    /** @type string */
+    const gameName = item.data[gameNameIndex];
+    /** @type string */
+    const category = item.data[categoryIndex];
+    /** @type string */
+    const runners = item.data[runnersIndex];
 
     /** @example "2023-08-10T12:00:00+09:00" */
     const scheduled = item.scheduled;
@@ -244,6 +243,7 @@ const calcFontSize = (text, fontFamily, maxFontsize, minFontsize, maxWidth) => {
     // console.log(`maxWidth=${maxWidth} width=${width} fontSize=${fontSize}`);
   }
 
+  console.log(`text=${text} size=${fontSize}px`);
   return fontSize;
 }
 
@@ -285,17 +285,19 @@ const draw = async () => {
   ctx.drawImage(hedaerImage, 0, 0);
 
   // 日付表示
-  const TEXT_COLOR = "rgb(37,48,58)";
+  // summer: 37,48,58
+  // winter: 57,38,31
+  const TEXT_COLOR = "rgb(57,38,31)";
   // x日目
   if (!isMultiPage) {
-    drawString(ctx, `100px ab-kokoro-no3`, "center", "bottom", TEXT_COLOR, Number(dayIndex) + 1, 600, 45 + 94); // ほんとは85だけど下が揃わないので
-    drawString(ctx, `40px ab-kokoro-no3`, "left", "bottom", TEXT_COLOR, "日目", 640, 45 + 85);
+    drawString(ctx, `100px MPLUS1p-Bold`, "center", "bottom", TEXT_COLOR, Number(dayIndex) + 1, 600, 45 + 94); // ほんとは85だけど下が揃わないので
+    drawString(ctx, `40px MPLUS1p-Bold`, "left", "bottom", TEXT_COLOR, "日目", 640, 45 + 85);
   } else {
-    drawString(ctx, `100px ab-kokoro-no3`, "center", "bottom", TEXT_COLOR, Number(dayIndex) + 1, 580, 45 + 94); // ほんとは85だけど下が揃わないので
-    drawString(ctx, `40px ab-kokoro-no3`, "left", "bottom", TEXT_COLOR, `日目-${pageIndex + 1}`, 620, 45 + 85);
+    drawString(ctx, `100px MPLUS1p-Bold`, "center", "bottom", TEXT_COLOR, Number(dayIndex) + 1, 580, 45 + 94); // ほんとは85だけど下が揃わないので
+    drawString(ctx, `40px MPLUS1p-Bold`, "left", "bottom", TEXT_COLOR, `日目-${pageIndex + 1}`, 620, 45 + 85);
   }
   // 日付
-  drawString(ctx, `30px ab-kokoro-no3`, "center", "bottom", TEXT_COLOR, date, 650, 150 + 35);
+  drawString(ctx, `30px MPLUS1p-Bold`, "center", "bottom", TEXT_COLOR, date, 650, 150 + 35);
 
   // ゲームリスト
   for (let i = 0; i < targetGames.length; i++) {
