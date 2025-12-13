@@ -1,0 +1,197 @@
+{
+  "data": {
+    "id": "4311n223bm3fmi7a8f",
+    "name": "RTA in Japan Winter 2023",
+    "slug": "rtaijw2023",
+    "timezone": "Asia/Tokyo",
+    "start": "2023-12-26T12:00:00+09:00",
+    "start_t": 1703559600,
+    "website": "https://rtain.jp/",
+    "twitter": "rtainjapan",
+    "twitch": "rtainjapan",
+    "description": null,
+    "setup": "PT08M",
+    "setup_t": 480,
+    "updated": "2023-12-29T12:16:55Z",
+    "hidden_columns": [],
+    "link": "https://horaro.org/rtaij/rtaijw2023",
+    "columns": [
+      "ゲーム",
+      "カテゴリ",
+      "機種",
+      "種類",
+      "予定タイム",
+      "走者"
+    ],
+    "items": [
+      {
+        "length": "PT2H55M",
+        "length_t": 10500,
+        "scheduled": "2023-12-26T12:00:00+09:00",
+        "scheduled_t": 1703559600,
+        "data": [
+          "ゲームタイトル",
+          "Category",
+          "PC",
+          "Single run",
+          "01:00:00",
+          "走者名"
+        ]
+      },
+      {
+        "length": "PT1H14M",
+        "length_t": 4440,
+        "scheduled": "2023-12-26T15:03:00+09:00",
+        "scheduled_t": 1703570580,
+        "data": [
+          "ゲームタイトル",
+          "Category",
+          "PC",
+          "Single run",
+          "01:00:00",
+          "走者名"
+        ]
+      },
+      {
+        "length": "PT32M",
+        "length_t": 1920,
+        "scheduled": "2023-12-26T16:25:00+09:00",
+        "scheduled_t": 1703575500,
+        "data": [
+          "ゲームタイトル",
+          "Category",
+          "PC",
+          "Single run",
+          "01:00:00",
+          "走者名"
+        ]
+      },
+      {
+        "length": "PT1H21M",
+        "length_t": 4860,
+        "scheduled": "2023-12-26T17:05:00+09:00",
+        "scheduled_t": 1703577900,
+        "data": [
+          "ゲームタイトル",
+          "Category",
+          "PC",
+          "Single run",
+          "01:00:00",
+          "走者名"
+        ]
+      },
+      {
+        "length": "PT27M",
+        "length_t": 1620,
+        "scheduled": "2023-12-26T18:34:00+09:00",
+        "scheduled_t": 1703583240,
+        "data": [
+          "ゲームタイトル",
+          "Category",
+          "PC",
+          "Single run",
+          "01:00:00",
+          "走者名"
+        ]
+      },
+      {
+        "length": "PT20M",
+        "length_t": 1200,
+        "scheduled": "2023-12-26T19:09:00+09:00",
+        "scheduled_t": 1703585340,
+        "data": [
+          "ゲームタイトル",
+          "Category",
+          "PC",
+          "Single run",
+          "01:00:00",
+          "走者名"
+        ]
+      },
+      {
+        "length": "PT24M",
+        "length_t": 1440,
+        "scheduled": "2023-12-26T19:37:00+09:00",
+        "scheduled_t": 1703587020,
+        "data": [
+          "ゲームタイトル",
+          "Category",
+          "PC",
+          "Single run",
+          "01:00:00",
+          "走者名"
+        ]
+      },
+      {
+        "length": "PT23M",
+        "length_t": 1380,
+        "scheduled": "2023-12-26T20:09:00+09:00",
+        "scheduled_t": 1703588940,
+        "data": [
+          "ゲームタイトル",
+          "Category",
+          "PC",
+          "Single run",
+          "01:00:00",
+          "走者名"
+        ]
+      },
+      {
+        "length": "PT20M",
+        "length_t": 1200,
+        "scheduled": "2023-12-26T20:40:00+09:00",
+        "scheduled_t": 1703590800,
+        "data": [
+          "ゲームタイトル",
+          "Category",
+          "PC",
+          "Single run",
+          "01:00:00",
+          "走者名"
+        ]
+      },
+      {
+        "length": "PT1H",
+        "length_t": 3600,
+        "scheduled": "2023-12-26T21:08:00+09:00",
+        "scheduled_t": 1703592480,
+        "data": [
+          "ゲームタイトル",
+          "Category",
+          "PC",
+          "Single run",
+          "01:00:00",
+          "走者名"
+        ]
+      },
+      {
+        "length": "PT1H32M",
+        "length_t": 5520,
+        "scheduled": "2023-12-26T22:16:00+09:00",
+        "scheduled_t": 1703596560,
+        "data": [
+          "ゲームタイトル",
+          "Category",
+          "PC",
+          "Single run",
+          "01:00:00",
+          "走者名"
+        ]
+      }
+    ],
+    "links": [
+      {
+        "rel": "self",
+        "uri": "https://horaro.org/-/api/v1/schedules/4311n223bm3fmi7a8f"
+      },
+      {
+        "rel": "event",
+        "uri": "https://horaro.org/-/api/v1/events/645002979s88wrb4d8"
+      },
+      {
+        "rel": "ticker",
+        "uri": "https://horaro.org/-/api/v1/schedules/4311n223bm3fmi7a8f/ticker"
+      }
+    ]
+  }
+}
